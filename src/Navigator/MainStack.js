@@ -3,6 +3,7 @@ import { createBottomTabNavigator, SafeAreaView } from "react-navigation";
 import { BottomNavigation, BottomNavigationTab } from "react-native-ui-kitten";
 import { Constants, navigate } from "~/Libs/NavigationService";
 import { HomeScreen, MessageScreen, MeScreen } from "./Screens/Main/index";
+import i18n from "~/Libs/i18n";
 
 export const BottomTabUI = props => {
   const onTabSelect = selectedIndex => {
@@ -28,9 +29,9 @@ export const BottomTabUI = props => {
         selectedIndex={props.navigation.state.index}
         onSelect={onTabSelect}
       >
-        <BottomNavigationTab title={Constants.Screens.HOME} />
-        <BottomNavigationTab title={Constants.Screens.MESSAGE} />
-        <BottomNavigationTab title={Constants.Screens.ME} />
+        <BottomNavigationTab title={i18n.t("navigation:tabs.home")} />
+        <BottomNavigationTab title={i18n.t("navigation:tabs.message")} />
+        <BottomNavigationTab title={i18n.t("navigation:tabs.me")} />
       </BottomNavigation>
     </SafeAreaView>
   );
