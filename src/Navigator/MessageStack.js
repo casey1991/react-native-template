@@ -1,9 +1,8 @@
 import React from "react";
-import { SafeAreaView } from "react-navigation";
-import { TopNavigation } from "react-native-ui-kitten";
 import { createStackNavigator } from "react-navigation";
 import { Constants } from "~/Libs/NavigationService";
 import { MessageScreen } from "./Screens/Main/index";
+import { MessageHeader } from "./headers";
 
 const MessageStack = createStackNavigator(
   {
@@ -11,14 +10,7 @@ const MessageStack = createStackNavigator(
       screen: MessageScreen,
       navigationOptions: props => {
         return {
-          header: (
-            <SafeAreaView
-              forceInset={{ top: "always", bottom: "never" }}
-              style={{ backgroundColor: "#FFF" }}
-            >
-              <TopNavigation title="Message" alignment="center" />
-            </SafeAreaView>
-          )
+          header: <MessageHeader />
         };
       }
     }
