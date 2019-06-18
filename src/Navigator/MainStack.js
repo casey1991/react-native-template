@@ -4,6 +4,7 @@ import { BottomNavigation, BottomNavigationTab } from "react-native-ui-kitten";
 import { Constants, navigate } from "~/Libs/NavigationService";
 import { HomeScreen, MessageScreen, MeScreen } from "./Screens/Main/index";
 import i18n from "~/Libs/i18n";
+import { MessageIcon, PersonIcon, ActivityIcon } from "~/assets/icons";
 
 export const BottomTabUI = props => {
   const onTabSelect = selectedIndex => {
@@ -29,9 +30,18 @@ export const BottomTabUI = props => {
         selectedIndex={props.navigation.state.index}
         onSelect={onTabSelect}
       >
-        <BottomNavigationTab title={i18n.t("navigation:tabs.home")} />
-        <BottomNavigationTab title={i18n.t("navigation:tabs.message")} />
-        <BottomNavigationTab title={i18n.t("navigation:tabs.me")} />
+        <BottomNavigationTab
+          title={i18n.t("navigation:tabs.home")}
+          icon={ActivityIcon}
+        />
+        <BottomNavigationTab
+          title={i18n.t("navigation:tabs.message")}
+          icon={MessageIcon}
+        />
+        <BottomNavigationTab
+          title={i18n.t("navigation:tabs.me")}
+          icon={PersonIcon}
+        />
       </BottomNavigation>
     </SafeAreaView>
   );
