@@ -2,11 +2,7 @@ import React from "react";
 import { View, StyleSheet, Text } from "react-native";
 export default class Me extends React.Component {
   render() {
-    return (
-      <View style={[styles.container]}>
-        <Text>Me</Text>
-      </View>
-    );
+    return <View style={[styles.container]}>{/* content */}</View>;
   }
 }
 const styles = StyleSheet.create({

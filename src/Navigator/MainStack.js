@@ -2,7 +2,9 @@ import React from "react";
 import { createBottomTabNavigator, SafeAreaView } from "react-navigation";
 import { BottomNavigation, BottomNavigationTab } from "react-native-ui-kitten";
 import { Constants, navigate } from "~/Libs/NavigationService";
-import { HomeScreen, MessageScreen, MeScreen } from "./Screens/Main/index";
+import HomeStack from "./HomeStack";
+import MessageStack from "./MessageStack";
+import MeStack from "./MeStack";
 import i18n from "~/Libs/i18n";
 import { MessageIcon, PersonIcon, ActivityIcon } from "~/assets/icons";
 
@@ -48,12 +50,12 @@ export const BottomTabUI = props => {
 };
 const MainStack = createBottomTabNavigator(
   {
-    [Constants.Screens.HOME]: { screen: HomeScreen },
-    [Constants.Screens.MESSAGE]: { screen: MessageScreen },
-    [Constants.Screens.ME]: { screen: MeScreen }
+    [Constants.Stacks.HOME_STACK]: { screen: HomeStack },
+    [Constants.Stacks.MESSAGE_STACK]: { screen: MessageStack },
+    [Constants.Stacks.ME_STACK]: { screen: MeStack }
   },
   {
-    initialRouteName: Constants.Screens.HOME,
+    initialRouteName: Constants.Stacks.HOME_STACK,
     tabBarComponent: BottomTabUI
   }
 );
