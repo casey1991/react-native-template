@@ -6,6 +6,12 @@ export const ArrowBackIcon = style => {
   };
   return Icon(source, style);
 };
+export const ArrowRightIcon = style => {
+  const source = {
+    imageSource: require("./eva/arrow-right.png")
+  };
+  return Icon(source, style);
+};
 export const MessageIcon = style => {
   const source = {
     imageSource: require("./eva/message.png")
@@ -21,6 +27,13 @@ export const PersonIcon = style => {
 export const ActivityIcon = style => {
   const source = {
     imageSource: require("./eva/activity.png")
+  };
+  return Icon(source, style);
+};
+
+export const SettingIcon = style => {
+  const source = {
+    imageSource: require("./eva/setting.png")
   };
   return Icon(source, style);
 };

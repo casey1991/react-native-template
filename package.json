@@ -8,6 +8,7 @@
   "dependencies": {
     "@eva-design/eva": "^1.0.0",
     "i18next": "11.9.0",
+    "prop-types": "^15.7.2",
     "react": "16.8.3",
     "react-i18next": "9.0.2",
     "react-native": "0.59.8",
