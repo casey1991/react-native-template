@@ -4,5 +4,6 @@ export default {
   me: "Me",
   login: "Login",
   username: "Username",
-  password: "Password"
+  password: "Password",
+  setting: "Setting"
 };

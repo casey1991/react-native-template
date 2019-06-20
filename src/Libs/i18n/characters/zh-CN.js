@@ -4,5 +4,6 @@ export default {
   me: "我",
   login: "登录",
   username: "用户名",
-  password: "密码"
+  password: "密码",
+  setting: "设置"
 };

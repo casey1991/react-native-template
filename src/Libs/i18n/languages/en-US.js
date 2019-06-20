@@ -13,6 +13,9 @@ export default {
       username: characters.username,
       password: characters.password,
       login: characters.login
+    },
+    setting: {
+      title: characters.setting
     }
   }
 };

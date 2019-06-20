@@ -21,3 +21,7 @@ i18n.use(reactI18nextModule).init({
 
 export default i18n;
 export { default as Constants } from "./constants";
+export const changeLanguage = language => {
+  // TODO: save it to store
+  i18n.changeLanguage(language);
+};
