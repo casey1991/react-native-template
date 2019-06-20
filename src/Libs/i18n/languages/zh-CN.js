@@ -6,5 +6,13 @@ export default {
       message: characters.messsage,
       me: characters.me
     }
+  },
+  screens: {
+    login: {
+      title: characters.login,
+      username: characters.username,
+      password: characters.password,
+      login: characters.login
+    }
   }
 };

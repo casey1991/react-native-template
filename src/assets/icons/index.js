@@ -37,3 +37,22 @@ export const SettingIcon = style => {
   };
   return Icon(source, style);
 };
+export const CloseIcon = style => {
+  const source = {
+    imageSource: require("./eva/close.png")
+  };
+  return Icon(source, style);
+};
+
+export const PersonOutlineIcon = style => {
+  const source = {
+    imageSource: require("./eva/person-outline.png")
+  };
+  return Icon(source, style);
+};
+export const ClockOutlineIcon = style => {
+  const source = {
+    imageSource: require("./eva/clock-outline.png")
+  };
+  return Icon(source, style);
+};

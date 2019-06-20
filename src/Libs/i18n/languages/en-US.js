@@ -7,5 +7,12 @@ export default {
       me: characters.me
     }
   },
-  home: characters.home
+  screens: {
+    login: {
+      title: characters.login,
+      username: characters.username,
+      password: characters.password,
+      login: characters.login
+    }
+  }
 };
