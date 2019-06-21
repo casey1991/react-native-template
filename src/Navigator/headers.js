@@ -142,3 +142,33 @@ export const SettingHeader = withStyles(SettingHeaderComponent, theme => ({
     borderBottomWidth: 1
   }
 }));
+
+class LanguagesHeaderComponent extends React.Component {
+  render() {
+    const { themedStyle } = this.props;
+    return (
+      <SafeAreaView
+        style={[themedStyle.container]}
+        forceInset={{ top: "always", bottom: "never" }}
+      >
+        <TopNavigation
+          alignment="center"
+          title={i18n.t("screens:languages.title")}
+          leftControl={
+            <TopNavigationAction
+              icon={ArrowBackIcon}
+              onPress={() => goBack()}
+            />
+          }
+        />
+      </SafeAreaView>
+    );
+  }
+}
+export const LanguagesHeader = withStyles(LanguagesHeaderComponent, theme => ({
+  container: {
+    backgroundColor: theme["background-basic-color-1"],
+    borderBottomColor: theme["background-basic-color-3"],
+    borderBottomWidth: 1
+  }
+}));

@@ -13,6 +13,7 @@ export const MESSAGE = "Message";
 export const ME = "Me";
 export const LOGIN = "Login";
 export const SETTING = "Setting";
+export const LANGUAGES = "Languages";
 export default {
   Stacks: {
     AUTH_STACK,
@@ -29,6 +30,7 @@ export default {
     MESSAGE,
     ME,
     LOGIN,
-    SETTING
+    SETTING,
+    LANGUAGES
   }
 };

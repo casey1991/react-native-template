@@ -56,3 +56,9 @@ export const ClockOutlineIcon = style => {
   };
   return Icon(source, style);
 };
+export const CheckMarkIcon = style => {
+  const source = {
+    imageSource: require("./eva/checkmark.png")
+  };
+  return Icon(source, style);
+};

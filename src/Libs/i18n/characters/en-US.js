@@ -5,5 +5,6 @@ export default {
   login: "Login",
   username: "Username",
   password: "Password",
-  setting: "Setting"
+  setting: "Setting",
+  languages: "Languages"
 };

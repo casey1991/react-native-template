@@ -15,7 +15,11 @@ export default {
       login: characters.login
     },
     setting: {
-      title: characters.setting
+      title: characters.setting,
+      languages: characters.languages
+    },
+    languages: {
+      title: characters.languages
     }
   }
 };

@@ -5,5 +5,6 @@ export default {
   login: "登录",
   username: "用户名",
   password: "密码",
-  setting: "设置"
+  setting: "设置",
+  languages: "多语言"
 };
