@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { View, StyleSheet } from "react-native";
 import { ListItem, withStyles } from "react-native-ui-kitten";
-import i18n, { Constants as I18nConstants } from "~/Libs/i18n";
+import i18n, { Constants as I18nConstants, changeLanguage } from "~/Libs/i18n";
 import { CheckMarkIcon } from "~/assets/icons";
 
 class Languages extends Component {
@@ -19,7 +19,7 @@ class Languages extends Component {
             )
           }
           onPress={() => {
-            i18n.changeLanguage(I18nConstants.LANGUAGE_EN_US);
+            changeLanguage(I18nConstants.LANGUAGE_EN_US);
           }}
         />
         <ListItem
@@ -32,7 +32,7 @@ class Languages extends Component {
             )
           }
           onPress={() => {
-            i18n.changeLanguage(I18nConstants.LANGUAGE_ZH_CH);
+            changeLanguage(I18nConstants.LANGUAGE_ZH_CH);
           }}
         />
       </View>
