@@ -3,7 +3,18 @@ import { StyleSheet } from "react-native";
 import { ListItem, withStyles } from "react-native-ui-kitten";
 import { Header } from "./Components";
 import { ScrollView } from "react-native-gesture-handler";
+import { navigate, Constants } from "~/Libs/NavigationService";
 class Me extends React.Component {
+  componentDidMount() {
+    const { navigation } = this.props;
+    if (navigation) {
+      navigation.setParams({
+        onSettingPress: () => {
+          navigate(Constants.Screens.SETTING);
+        }
+      });
+    }
+  }
   _onHeaderPressed = () => {};
   _renderItem = () => {
     return <ListItem title={"title"} />;

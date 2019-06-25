@@ -57,7 +57,7 @@ export const MessageHeader = withStyles(MessageHeaderComponent, theme => ({
 }));
 class MeHeaderComponent extends React.Component {
   render() {
-    const { themedStyle } = this.props;
+    const { themedStyle, onSettingPress } = this.props;
     return (
       <SafeAreaView
         style={[themedStyle.container]}
@@ -69,7 +69,8 @@ class MeHeaderComponent extends React.Component {
           rightControls={
             <TopNavigationAction
               icon={SettingIcon}
-              onPress={() => navigate(SETTING)}
+              // onPress={() => navigate(SETTING)}
+              onPress={onSettingPress}
             />
           }
         />

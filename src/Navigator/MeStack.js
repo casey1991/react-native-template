@@ -8,9 +8,13 @@ const MeStack = createStackNavigator(
   {
     [Constants.Screens.ME]: {
       screen: MeScreen,
-      navigationOptions: props => {
+      navigationOptions: ({ navigation }) => {
         return {
-          header: <MeHeader />
+          header: (
+            <MeHeader
+              onSettingPress={navigation.getParam("onSettingPress", () => {})}
+            />
+          )
         };
       }
     }
