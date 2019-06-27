@@ -15,7 +15,9 @@ class Me extends React.Component {
       });
     }
   }
-  _onHeaderPressed = () => {};
+  _onHeaderPressed = () => {
+    navigate(Constants.Screens.LOGIN);
+  };
   _renderItem = () => {
     return <ListItem title={"title"} />;
   };

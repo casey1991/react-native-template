@@ -1,19 +1,8 @@
 import React from "react";
-import { View, StyleSheet, Text } from "react-native";
-import { Button } from "react-native-ui-kitten";
-import { navigate } from "~/Libs/NavigationService";
-import { LOGIN } from "~/Libs/NavigationService/Constants";
-import i18n from "~/Libs/i18n";
+import { View, StyleSheet } from "react-native";
 export default class Home extends React.Component {
   render() {
-    return (
-      <View style={[styles.container]}>
-        {/* content */}
-        <Button onPress={() => navigate(LOGIN)}>
-          {i18n.t("screens:login.title")}
-        </Button>
-      </View>
-    );
+    return <View style={[styles.container]}>{/* content */}</View>;
   }
 }
 const styles = StyleSheet.create({

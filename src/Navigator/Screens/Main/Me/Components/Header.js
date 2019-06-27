@@ -2,24 +2,29 @@ import React from "react";
 import { View, StyleSheet, TouchableOpacity } from "react-native";
 import { Avatar, Text, Button } from "react-native-ui-kitten";
 import PropTypes from "prop-types";
-import { ImageApartmentSource } from "~/assets/images";
+import { ImageUnknowPersonSource } from "~/assets/images";
 import { ArrowRightIcon } from "~/assets/icons";
+import i18n from "~/Libs/i18n";
 class Header extends React.Component {
   static propTypes = {
+    avatar: PropTypes.string,
+    name: PropTypes.string,
     onPress: PropTypes.func
   };
   static defaultProps = {
+    avatar: ImageUnknowPersonSource.uri,
+    name: i18n.t("screens:me.login"),
     onPress: () => {}
   };
   render() {
-    const { onPress } = this.props;
+    const { onPress, avatar, name } = this.props;
     return (
       <TouchableOpacity style={[styles.container]} onPress={onPress}>
         <View style={[styles.avatarContainer]}>
-          <Avatar source={ImageApartmentSource} size="large" />
+          <Avatar source={{ uri: avatar }} size="large" />
         </View>
         <View style={[styles.contentContainer]}>
-          <Text category={"h6"}>Casey</Text>
+          <Text category={"h6"}>{name}</Text>
         </View>
         <View style={[styles.actionsContainer]}>
           <Button icon={ArrowRightIcon} appearance="ghost" />

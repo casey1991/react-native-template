@@ -1,4 +1,5 @@
 import { en_US as characters } from "../characters";
+import { NAME_SPACE } from "../constants";
 export default {
   navigation: {
     tabs: {
@@ -7,7 +8,7 @@ export default {
       me: characters.me
     }
   },
-  screens: {
+  [NAME_SPACE.SCREENS]: {
     login: {
       title: characters.login,
       username: characters.username,
@@ -20,6 +21,9 @@ export default {
     },
     languages: {
       title: characters.languages
+    },
+    me: {
+      login: characters.login
     }
   }
 };

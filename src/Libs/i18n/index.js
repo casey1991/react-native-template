@@ -24,6 +24,7 @@ AsyncStorage.getItem("currentLanguage").then(language => {
 });
 export default i18n;
 export { default as Constants } from "./constants";
+export * from "./constants";
 export const changeLanguage = language => {
   i18n.changeLanguage(language, error => {
     if (!error) {
